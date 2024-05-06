@@ -42,9 +42,9 @@ function AboutAs() {
       <div className="w-[80%] p-2 flex mt-[50px] mx-auto flex-wrap">
         <img className='w-[50%] object-cover ' src="/img.jpg" alt="example"></img>
         <div className="w-[50%]">
-          <p className=" text-black p-4 text-[12px] sm:text-[26px]"> &nbsp; &nbsp; &nbsp; &nbsp;Detail About Product for user fit with your Skin And Face.
+          <p className=" text-black p-4 text-[12px] sm:text-[18px] md:text[20px] lg:text[24px]"> &nbsp; &nbsp; &nbsp; &nbsp;Detail About Product for user fit with your Skin And Face.
             Everyone always needs a product that has quality!</p>
-          <p className=" text-gray-700 p-4 text-[10px] sm:text-[18px]"> &nbsp; &nbsp; &nbsp; &nbsp;
+          <p className=" text-gray-700 p-4 text-[8px] sm:text-[12px] md:-[14px] lg:txet-[22px] 2xl:text-[] "> &nbsp; &nbsp; &nbsp; &nbsp;
             Illumination Consulting is a digital agency, providing consulting services, marketing, design, and development solutions. The agency was started by a group of entrepreneurs over
             20 years ago, who have operated several businesses across multiple industries holding various positions.
             At Illumination Consulting, all projects are reviewed and discussed with the client by a skilled business consultant. An experienced creative and marketing
@@ -88,20 +88,23 @@ function AboutAs() {
           </p>
         </div>
 
-        <div className="w-[45%] relative group">
-      <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className='w-full h-[300px] rounded-2xl bg-center bg-cover duration-500 object-cover'
-      ></div>
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-        <AiOutlineArrowLeft onClick={prevSlide} size={20} />
-      </div>
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-        <AiOutlineArrowRight onClick={nextSlide} size={20} />
-      </div>
+       <div className="w-[45%] relative group">
+        <div
+          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+          className='w-full h-[300px] rounded-2xl bg-center bg-cover duration-500 object-cover'
+        ></div>
+        <div className=''>
+        {/* group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer */}
+          <AiOutlineArrowLeft onClick={prevSlide} size={20} className="hidden"/>
+        </div>
+        <div className=' '>
+        {/* group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer */}
+          <AiOutlineArrowRight onClick={nextSlide} size={20} className="hidden" />
+       </div>
+
       <div className='flex top-4 justify-center py-2 text-28px'>
         {slides.map((slide, slideIndex) => (
-          <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-2xl cursor-pointer text-39px'>
+          <div key={slideIndex} onClick={() => goToSlide(slideIndex)} className='text-2xl cursor-pointer text-39px '>
             <RxDotFilled />
           </div>
         ))}

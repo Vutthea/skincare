@@ -16,26 +16,23 @@ function Product(){
         { "img": "mark2.jpg", "title": "This is the Skin care", "subTitlt": "Uer it for Daytime", "body": "Help your skin stay in good condition" },
         { "img": "mark3.jpg", "title": "This is the Skin care", "subTitlt": "Uer it for Daytime", "body": "Help your skin stay in good condition" },
         { "img": "mark4.png", "title": "This is the Skin care", "subTitlt": "Uer it for Daytime", "body": "Help your skin stay in good condition" }
-
-
-   ]
+   ];
     return(
         <>
-               <div className="w-[92%] mt-4  mx-auto flex flex-wrap justify-center ">
-                    {data.map((item) => {
-                         return
-                          <div className="w-[300px] p-2 bg-green-300 rounded-[10px] m-2 flex-col ">
-                              <img className="w-[100%] rounded-xl p-2 h-[284px] md:h-[150px] object-cover" src={item.img}/>
-                              <div className="w-[100%] flex-col mx-auto">
-                                   <h1 className="text-black text-[20px] text-center">{item.title}</h1>
-                                   <span className="text-black text-[16px] flex justify-center">{item.subTitlt}</span>
-                                   <span className="text-black text-[12px] flex justify-center">{item.body}</span>
-                                   <button className="text-red-800  flex justify-center mx-auto" type="button">View</button>
-                              </div>
-                         </div>
-                    })}
-                  
-               </div>
+               <div className="w-[92%] mt-4 mx-auto flex flex-wrap justify-center">
+            {data.map((item)=>{
+                return(
+                    <div className="w-[300px] p-2 bg-green-300 rounded-[10px] m-2 flex-col " >
+                        <img className="w-[100%] rounded-xl p-2 h-[280px] md:h-[150px] object-cover" src={item.img}/>
+                        <div className="w-[100%] flex-col mx-auto">
+                            <h1 className="text-black text-[16px] text-center">{item.title}</h1>
+                            <span className="text-black text-[16px] flex justify-center">{item.body}</span>
+                            <button className="text-red-800 flex justify-center mx-auto" type="button">View</button>
+                        </div>
+                    </div>
+                )
+            })}
+         </div>
 
               
              
